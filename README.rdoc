@@ -2,13 +2,8 @@
 
 LINK TO HEROKU APP: http://murmuring-citadel-2602.herokuapp.com/
 
-ISSUES: -ignoring sqlite bundle 
--using rails version 4.0 
--figuring out what git commands mean 
--remembering to save...
+ISSUES: deciding how to format
 
-WHAT I DID: -downloaded rails 
--created new rails app called firstRailsApp
--created new github repo: railsProject
--edited index.html to include my name and display on my app
--deployed firstRailsApp to heroku 
+WHAT I DID: -used w3schools to make form element
+-formatted page in CSS file
+-pushed to heroku 
