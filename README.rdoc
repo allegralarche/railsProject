@@ -2,7 +2,7 @@
 
 LINK TO HEROKU APP: http://murmuring-citadel-2602.herokuapp.com/
 
-ISSUES: deciding how to format
+ISSUES: Still can't get heroku to adopt styling. Works fine when I open it in browser locally, but not when I try to open it with heroku.
 
 WHAT I DID: -used w3schools to make form element
 -formatted page in CSS file
