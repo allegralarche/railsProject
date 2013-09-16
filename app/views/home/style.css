@@ -1,0 +1,14 @@
+body {
+	background-color: #99FF66;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 100px 100px 100px 100px;
+}
+.input {
+	padding: 10px 10px 10px 10px;
+	border: 2px solid #00FF66;
+	border-radius: 2px;
+}
+img {
+	border: 3px solid #00FF66;
+}
