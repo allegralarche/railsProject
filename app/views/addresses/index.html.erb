@@ -1,2 +1,23 @@
-<h1>Addresses#index</h1>
-<p>Find me in app/views/addresses/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<body>
+	<table>
+		<tr>
+			<td>house number</td>
+			<td>street name</td>
+			<td>city</td>
+			<td>state</td>
+			<td>zip</td>
+		</tr>
+		<% @addresses.each do |address| %>
+		<tr>
+			<td><%= address.number %></td>
+			<td><%= address.street %></td>
+			<td><%= address.city %></td>
+			<td><%= address.state %></td>
+			<td><%= address.zip %></td>
+		</tr>
+		<% end %>
+	</table>
+</body>
+</html>

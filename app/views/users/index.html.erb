@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
 <body>
 	<table>
 		<tr>
@@ -14,24 +12,6 @@
 			<td><%= user.name %></td>
 			<td><%= user.email %></td>
 			<td><%= user.password %></td>
-		</tr>
-		<% end %>
-	</table>
-	<table>
-		<tr>
-			<td>house number</td>
-			<td>street name</td>
-			<td>city</td>
-			<td>state</td>
-			<td>zip</td>
-		</tr>
-		<% @addresses.each do |address| %>
-		<tr>
-			<td><%= address.number %></td>
-			<td><%= address.street %></td>
-			<td><%= address.city %></td>
-			<td><%= address.state %></td>
-			<td><%= address.zip %></td>
 		</tr>
 		<% end %>
 	</table>
