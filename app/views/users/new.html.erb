@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<%= form_for(@user) do |f| %>
+		<div class="field">
+			<p>name:</p>
+			<%= f.text_field :name%>
+		</div>
+		<div class="field">
+			<p>email:</p>
+			<%= f.text_field :email%>
+		</div>
+		<div class="field">
+			<p>password:</p>
+			<%= f.text_field :password%>
+		</div>
+		<div class="actions">
+			<%= f.submit %>
+		</div>
+	<% end %>
+	<%= form_for(@address) do |f| %>
+		<div class="field">
+			<p>house number:</p>
+			<%= f.text_field :number%>
+		</div>
+		<div class="field">
+			<p>street name:</p>
+			<%= f.text_field :street%>
+		</div>
+		<div class="field">
+			<p>city:</p>
+			<%= f.text_field :city%>
+		</div>
+		<div class="field">
+			<p>state:</p>
+			<%= f.text_field :state%>
+		</div>
+		<div class="field">
+			<p>zip code:</p>
+			<%= f.text_field :zip%>
+		</div>
+		<div class="actions">
+			<%= f.submit %>
+		</div>
+	<% end %>
+</body>
+</html>
