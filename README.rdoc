@@ -2,8 +2,11 @@
 
 LINK TO HEROKU APP: http://murmuring-citadel-2602.herokuapp.com/
 
-ISSUES: Still can't get heroku to adopt styling. Works fine when I open it in browser locally, but not when I try to open it with heroku.
+ISSUES: -couldn't figure out how to link to other paths using html--had to check out source code for example in class
+-couldn't get submit buttons to update databases correctly--had to change code in the controllers
 
-WHAT I DID: -used w3schools to make form element
--formatted page in CSS file
--pushed to heroku 
+WHAT I DID: -created two schema: one for users that contained their username, email, and password. The other for addresses that contained the house number, street name, city, state, and zip code of a place. 
+-created a landing page that acts as a home to link to a new input page and the actual rendering of the database
+-created an index page and a new input page for each database using ruby forms within html code
+-updated the controllers to create new users and addresses when the forms are submitted
+-pushed to git and heroku
