@@ -1,0 +1,25 @@
+<%= form_for(@user) do |f| %>
+	<div class="field">
+		<p>number:</p>
+		<%= f.text_field :number %>
+	</div>
+	<div class="field">
+		<p>street:</p>
+		<%= f.text_field :street %>
+	</div>
+	<div class="field">
+		<p>city:</p>
+		<%= f.text_field :city %>
+	</div>
+	<div class="field">
+		<p>state:</p>
+		<%= f.text_field :state %>
+	</div>
+	<div class="field">
+		<p>zip:</p>
+		<%= f.text_field :zip %>
+	</div>
+	<div class = "actions">
+		<%= f.submit %>
+	</div>
+<% end %>

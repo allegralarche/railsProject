@@ -19,4 +19,27 @@ class AddressesController < ApplicationController
   def address_params
     params.require(:address).permit(:number, :street, :city, :state, :zip)
   end
+
+  def show
+    @address = Address.find(params[:id])
+  end
+
+  def edit 
+    @address = Adress.find(params[:id])
+  end
+
+  def update 
+    @address = Address.find(params[id])
+    if @address.update_attributes(params[:id])
+      redirect_to addresses_path(@address.id)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @address = Address.find(params[id])
+    @address.destroy
+    redirect_to addresses_path
+  end
 end
