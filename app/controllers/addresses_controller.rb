@@ -25,11 +25,11 @@ class AddressesController < ApplicationController
   end
 
   def edit 
-    @address = Adress.find(params[:id])
+    @address = Address.find(params[:id])
   end
 
   def update 
-    @address = Address.find(params[id])
+    @address = Address.find(params[:id])
     if @address.update_attributes(params[:id])
       redirect_to addresses_path(@address.id)
     else
@@ -38,7 +38,7 @@ class AddressesController < ApplicationController
   end
 
   def destroy
-    @address = Address.find(params[id])
+    @address = Address.find(params[:id])
     @address.destroy
     redirect_to addresses_path
   end
