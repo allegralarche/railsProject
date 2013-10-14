@@ -30,7 +30,7 @@ class TasklistsController < ApplicationController
 
   def update 
   	@tasklist = Tasklist.find(params[:id])
-  	if @tasklist.update_attributes(params[:tasklist])
+  	if @tasklist.update_attributes(params[:tasklist_params])
   		redirect_to tasklist_path(@tasklist.id)
   	else
   		render "edit"

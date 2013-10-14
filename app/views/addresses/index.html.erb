@@ -18,7 +18,7 @@
 			<td><%= address.zip %></td>
 			<td><%= link_to "show address", address_path(address.id) %></td>
 			<td><%= link_to "edit address", edit_address_path(address.id) %></td>
-			<td><%= link_to "destroy address", address, method: :delete %></td>
+			<td><%= button_to "destroy address", address, method: :delete %></td>
 		<% end %>
 	</table>
 </body>

@@ -1,3 +1,12 @@
+<div class="error-msg">
+	<% if @address.errors.any? %>
+		<ul>
+			<% @address.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+</div>
 <%= form_for(@address) do |f| %>
 	<div class="field">
 		<p>number:</p>

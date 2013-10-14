@@ -9,7 +9,7 @@
 		<td><%= tasklist.user.name %></td>
 		<td><%= link_to "show tasklist", tasklist_path(tasklist.id) %></td>
 		<td><%= link_to "edit tasklist", edit_tasklist_path(tasklist.id) %> </td>
-		<td><%= link_to "destroy tasklist", tasklist, method: :delete %></td>
+		<td><%= button_to "destroy tasklist", tasklist, method: :delete %></td>
 	</tr>
 	<% end %>
 </table>

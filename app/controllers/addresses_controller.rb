@@ -30,8 +30,8 @@ class AddressesController < ApplicationController
 
   def update 
     @address = Address.find(params[:id])
-    if @address.update_attributes(params[:id])
-      redirect_to addresses_path(@address.id)
+    if @address.update_attributes(params[:address_params])
+      redirect_to address_path(@address.id)
     else
       render 'edit'
     end
