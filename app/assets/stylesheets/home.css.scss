@@ -1,3 +1,32 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background-image: url("http://hdwallfan.com/wp-content/uploads/2013/06/Purple-Flowers-Wallpaper-HD-Background.jpg");
+}
+
+ul {
+	position: absolute;
+	top: 0px;
+	background-color: #A4A4A4;
+	width: 100%;
+	opacity: .8;
+}
+
+li {
+	list-style-type: none;
+	padding: 30px;
+	margin: 0px;
+	display: inline;
+	float: left;
+}
+a {
+	display: block;
+	text-decoration: none;
+	color: #EFF2FB;
+}
+
+a:hover {
+	color:#DF7401;
+}

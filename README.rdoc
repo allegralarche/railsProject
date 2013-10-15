@@ -2,12 +2,8 @@
 
 LINK TO HEROKU APP: http://murmuring-citadel-2602.herokuapp.com/
 
-ISSUES: LOTS OF ISSUES
-- edit isn't working for any of the tables and I don't understand the error
-- destroy is working perfectly on my local server and then redirecting to the "show" view and not destroying the entry on heroku so I'm not sure why that's happening
-- I wasn't able to make it to office hours this week so I'll be coming to the ones this coming week to try to sort out the problems
-- I attached the error messages that I was getting in my github
+ISSUES: -my edit function still isn't working but it doesn't throw an error anymore
+-the styling that I did for one controller was being transferred over to separate controllers even though I had already overwritten it for the other controller. I ended up giving them all the same styling without putting it into the application stylesheet.
 
-WHAT I DID: -added show, destroy, and edit (almost) functionality to all three schema
--created a table called Tasklists that has a "belongs_to :user" attribute
--pushed to github and heroku 
+WHAT I DID: -added various validations to new user, address, and tasklists
+-styled pages a little 

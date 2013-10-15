@@ -1,22 +1,24 @@
-<div class="error-msg">
-	<% if @tasklist.errors.any? %>
-	<ul>
-		<% @tasklist.errors.full_messages.each do |msg| %>
-			<li><%= msg %></li>
+<body>
+	<div class="error-msg">
+		<% if @tasklist.errors.any? %>
+		<ul>
+			<% @tasklist.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
 		<% end %>
-	</ul>
+	</div>
+	<%= form_for(@tasklist) do |f| %>
+		<div class="field">
+			<p>title:</p>
+			<%= f.text_field :title%>
+		</div>
+		<div class="field">
+			<p>user:</p>
+			<%= f.collection_select :user_id, User.all, :id, :name %>
+		</div>
+		<div class="actions">
+			<%= f.submit %>
+		</div>
 	<% end %>
-</div>
-<%= form_for(@tasklist) do |f| %>
-	<div class="field">
-		<p>title:</p>
-		<%= f.text_field :title%>
-	</div>
-	<div class="field">
-		<p>user:</p>
-		<%= f.collection_select :user_id, User.all, :id, :name %>
-	</div>
-	<div class="actions">
-		<%= f.submit %>
-	</div>
-<% end %>
+</body>

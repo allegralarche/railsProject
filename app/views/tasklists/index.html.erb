@@ -1,15 +1,17 @@
-<table>
-	<tr>
-		<td>title</td>
-		<td>user</td>
-	</tr>
-	<% @tasklists.each do |tasklist| %>
-	<tr>
-		<td><%= tasklist.title %></td>
-		<td><%= tasklist.user.name %></td>
-		<td><%= link_to "show tasklist", tasklist_path(tasklist.id) %></td>
-		<td><%= link_to "edit tasklist", edit_tasklist_path(tasklist.id) %> </td>
-		<td><%= button_to "destroy tasklist", tasklist, method: :delete %></td>
-	</tr>
-	<% end %>
-</table>
+<body>
+	<table>
+		<tr>
+			<td>title</td>
+			<td>user</td>
+		</tr>
+		<% @tasklists.each do |tasklist| %>
+		<tr>
+			<td><%= tasklist.title %></td>
+			<td><%= tasklist.user.name %></td>
+			<td><%= link_to "show tasklist", tasklist_path(tasklist.id) %></td>
+			<td><%= link_to "edit tasklist", edit_tasklist_path(tasklist.id) %> </td>
+			<td><%= button_to "destroy tasklist", tasklist, method: :delete %></td>
+		</tr>
+		<% end %>
+	</table>
+</body>
