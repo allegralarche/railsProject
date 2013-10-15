@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+body {
+  margin: 10px;
+  font-family: Helvetica, Arial;
+  font-size: 30px;
+  color: white; }
+body {
+  background-image: url("http://hdwallfan.com/wp-content/uploads/2013/06/Purple-Flowers-Wallpaper-HD-Background.jpg"); }
+
+ul {
+  position: absolute;
+  top: 0px;
+  background-color: #A4A4A4;
+  width: 100%;
+  opacity: .8; }
+
+li {
+  list-style-type: none;
+  padding: 30px;
+  margin: 0px;
+  display: inline;
+  float: left; }
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #EFF2FB; }
+
+a:hover {
+  color: #DF7401; }
+body {
+  margin: 10px;
+  font-family: Helvetica, Arial;
+  font-size: 30px;
+  color: white; }
+body {
+  margin: 10px;
+  font-family: Helvetica, Arial;
+  font-size: 30px;
+  color: white; }
