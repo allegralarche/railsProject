@@ -1,6 +1,7 @@
 FirstRailsApp::Application.routes.draw do
+  devise_for :users
   resources :addresses
-  resources :users
+  #resources :users
   resources :tasklists
   get "landing_pages/home"
   get "home/index"
