@@ -2,10 +2,11 @@
 
 LINK TO HEROKU APP: http://murmuring-citadel-2602.herokuapp.com/
 
-ISSUES: -my edit function still isn't working and is throwing a different error
--the styling that I did for one controller was being transferred over to separate controllers even though I had already overwritten it for the other controller. I ended up giving them all the same styling without putting it into the application stylesheet.
--when I push to heroku, none of my styling appears. I tried adding the actual link to the stylesheet in some of the views but it still won't show up
+ISSUES:
+-From last time: the styling that I did for one controller was being transferred over to separate controllers even though I had already overwritten it for the other controller. I ended up giving them all the same styling without putting it into the application stylesheet.
+
+-App works fine on local host and not at all when I try to open with heroku
 
 
-WHAT I DID: -added various validations to new user, address, and tasklists
--styled pages a little 
+WHAT I DID: -added devise gem to app
+- redid some styling to fit in navbar
