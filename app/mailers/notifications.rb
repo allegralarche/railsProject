@@ -6,7 +6,7 @@ class Notifications < ActionMailer::Base
   #
   #   en.notifications.new_tasklist.subject
   #
-  def new_tasklist
+  def new_tasklist(tasklist)
     @greeting = "Hi"
     @id = tasklist.id
     mail to: tasklist.user.email
