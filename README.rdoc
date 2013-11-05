@@ -3,10 +3,9 @@
 LINK TO HEROKU APP: http://murmuring-citadel-2602.herokuapp.com/
 
 ISSUES:
--From last time: the styling that I did for one controller was being transferred over to separate controllers even though I had already overwritten it for the other controller. I ended up giving them all the same styling without putting it into the application stylesheet.
+-App wasn't working on heroku so I had to reset my database and re rake and then it worked fine
 
--App works fine on local host and not at all when I try to open with heroku
+-I had a typo that was screwing up my whole notifications section-- check for spelling errors next time!
 
 
-WHAT I DID: -added devise gem to app
-- redid some styling to fit in navbar
+WHAT I DID: -added sendgrid addon so that emails are sent when a new tasklist is created or when someone forgets their password
