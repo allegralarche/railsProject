@@ -1,7 +1,7 @@
 class TasklistsController < ApplicationController
   def index
     if user_signed_in?
-  	 @tasklists = Tasklist.where(user_id:current_user)
+  	 @tasklists = Tasklist.where(user_id:current_user).ordered
     else
       @tasklists = []
     end

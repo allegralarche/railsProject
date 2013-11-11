@@ -3,9 +3,7 @@
 LINK TO HEROKU APP: http://murmuring-citadel-2602.herokuapp.com/
 
 ISSUES:
--App wasn't working on heroku so I had to reset my database and re rake and then it worked fine
-
--I had a typo that was screwing up my whole notifications section-- check for spelling errors next time!
+-I don't think my edit tasklist function is working correctly but no issues with scope
 
 
-WHAT I DID: -added sendgrid addon so that emails are sent when a new tasklist is created or when someone forgets their password
+WHAT I DID: -added ordering scope to tasklists. I think this could have just been done with a single query in the view since I only called it once but now if I need to use it in other places in the future I can. 
