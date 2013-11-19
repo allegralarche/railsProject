@@ -3,7 +3,7 @@
 LINK TO HEROKU APP: http://murmuring-citadel-2602.herokuapp.com/
 
 ISSUES:
--I don't think my edit tasklist function is working correctly but no issues with scope
+-Don't know how to make it so that when I'm not hovering over the nav bar, it doesn't get highlighted
 
 
-WHAT I DID: -added ordering scope to tasklists. I think this could have just been done with a single query in the view since I only called it once but now if I need to use it in other places in the future I can. 
+WHAT I DID: -when the mouse hovers over the navbar, it gets highlighted a darker gray

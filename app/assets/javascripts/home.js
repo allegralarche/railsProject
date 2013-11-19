@@ -1,5 +1,5 @@
 $(function() {
 	$(".nav").hover(function() {
-		$(".nav").css("background-color", "orange");
+		$("ul").css("background-color", "grey");
 	})
 })
