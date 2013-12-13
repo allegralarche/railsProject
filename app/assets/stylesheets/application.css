@@ -12,3 +12,35 @@
  *= require_tree .
  */
 
+body {
+	background-image: url("http://hdwallfan.com/wp-content/uploads/2013/06/Purple-Flowers-Wallpaper-HD-Background.jpg");
+}
+
+.center {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.navbar {
+	position: absolute;
+	top: 0px;
+	background-color: #A4A4A4;
+	width: 100%;
+	opacity: .8;
+}
+
+.nav-li {
+	list-style-type: none;
+	padding: 30px;
+	margin: 0px;
+	display: inline;
+	float: left;
+}
+a {
+	display: block;
+	text-decoration: none;
+	color: #EFF2FB;
+}
+
+a:hover {
+	color:#380B61;
+}

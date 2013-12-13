@@ -1,4 +1,17 @@
 <body>
+	<% if user_signed_in? %>
+		<ul class = "navbar">
+			<li class="nav-li"><a href="/addresses">Contacts</a></li>
+			<li class="nav-li"><a href="/tasklists">To-Do List</a></li>
+			<li class="nav-li"><a href="/addresses/new">Add Contact</a></li>
+			<li class="nav-li"><a href="/tasklists/new">Add Task</a><li>
+			<% if user_signed_in? %>
+			<li class = "nav-li"><%= link_to('Logout', destroy_user_session_path,:method => :delete) %></li>
+			<% else %>
+			<li class="nav-li"><%= link_to('Login', new_user_session_path) %></li>
+			<% end %>
+		</ul>
+	<% end %>
 	<div class="error-msg">
 		<% if @tasklist.errors.any? %>
 		<ul>
@@ -8,16 +21,22 @@
 		</ul>
 		<% end %>
 	</div>
-	<%= form_for(@tasklist) do |f| %>
-		<div class="field">
-			<p>title:</p>
-			<%= f.text_field :title%>
-		</div>
-		<div class="field">
-			<%= f.hidden_field :user_id, :value =>current_user.id%>
-		</div>
-		<div class="actions">
-			<%= f.submit %>
-		</div>
-	<% end %>
+	<div class="center">
+		<%= form_for(@tasklist) do |f| %>
+			<div class="field">
+				<p>To-Do:</p>
+				<%= f.text_field :title%>
+			</div>
+			<div class="field">
+				<p>Complete Task By:</p>
+				<%= f.datetime_field :duedate%>
+			</div>
+			<div class="field">
+				<%= f.hidden_field :user_id, :value =>current_user.id%>
+			</div>
+			<div class="actions">
+				<%= f.submit %>
+			</div>
+		<% end %>
+	</div>
 </body>

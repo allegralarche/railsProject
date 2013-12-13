@@ -2,6 +2,19 @@
 <html>
 <head><link rel="stylesheet" type="text/css" href="../assets/addresses.css.scss"></head>
 <body>
+	<% if user_signed_in? %>
+		<ul class = "navbar">
+			<li class="nav-li"><a href="/addresses">Contacts</a></li>
+			<li class="nav-li"><a href="/tasklists">To-Do List</a></li>
+			<li class="nav-li"><a href="/addresses/new">Add Contact</a></li>
+			<li class="nav-li"><a href="/tasklists/new">Add Task</a><li>
+			<% if user_signed_in? %>
+			<li class = "nav-li"><%= link_to('Logout', destroy_user_session_path,:method => :delete) %></li>
+			<% else %>
+			<li class="nav-li"><%= link_to('Login', new_user_session_path) %></li>
+			<% end %>
+		</ul>
+	<% end %>
 	<div class="error-msg">
 	<% if @address.errors.any? %>
 		<ul>
@@ -11,30 +24,43 @@
 		</ul>
 	<% end %>
 	</div>
-	<%= form_for(@address) do |f| %>
-		<div class="field">
-			<p>house number:</p>
-			<%= f.text_field :number%>
-		</div>
-		<div class="field">
-			<p>street name:</p>
-			<%= f.text_field :street%>
-		</div>
-		<div class="field">
-			<p>city:</p>
-			<%= f.text_field :city%>
-		</div>
-		<div class="field">
-			<p>state:</p>
-			<%= f.text_field :state%>
-		</div>
-		<div class="field">
-			<p>zip code:</p>
-			<%= f.text_field :zip%>
-		</div>
-		<div class="actions">
-			<%= f.submit %>
-		</div>
-	<% end %>
+	<div class = "center">
+		<%= form_for(@address) do |f| %>
+			<div class = "field">
+				<p>Name:</p>
+				<%= f.text_field :friend%>
+			</div>
+			<div class="field">
+				<p>House Number:</p>
+				<%= f.text_field :number%>
+			</div>
+			<div class="field">
+				<p>Street Name:</p>
+				<%= f.text_field :street%>
+			</div>
+			<div class="field">
+				<p>City:</p>
+				<%= f.text_field :city%>
+			</div>
+			<div class="field">
+				<p>State:</p>
+				<%= f.text_field :state%>
+			</div>
+			<div class="field">
+				<p>Zip Code:</p>
+				<%= f.text_field :zip%>
+			</div>
+			<div class="field"> 
+				<p>Phone Number:</p>
+				<%= f.telephone_field :phone%>
+			</div>
+			<div class="field">
+				<%= f.hidden_field :user_id, :value =>current_user.id%>
+			</div>
+			<div class="actions">
+				<%= f.submit %>
+			</div>
+		<% end %>
+	</div>
 </body>
 </html>

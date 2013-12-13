@@ -2,25 +2,36 @@
 <html>
 <head><link rel="stylesheet" type="text/css" href="../assets/addresses.css.scss"></head>
 <body>
-	<table>
-		<tr>
-			<td>house number</td>
-			<td>street name</td>
-			<td>city</td>
-			<td>state</td>
-			<td>zip</td>
-		</tr>
-		<% @addresses.each do |address| %>
-		<tr>
-			<td><%= address.number %></td>
-			<td><%= address.street %></td>
-			<td><%= address.city %></td>
-			<td><%= address.state %></td>
-			<td><%= address.zip %></td>
-			<td><%= link_to "show address", address_path(address.id) %></td>
-			<td><%= link_to "edit address", edit_address_path(address.id) %></td>
-			<td><%= button_to "destroy address", address, method: :delete %></td>
-		<% end %>
-	</table>
+	<% if user_signed_in? %>
+		<ul class = "navbar">
+			<li class="nav-li"><a href="/addresses">Contacts</a></li>
+			<li class="nav-li"><a href="/tasklists">To-Do List</a></li>
+			<li class="nav-li"><a href="/addresses/new">Add Contact</a></li>
+			<li class="nav-li"><a href="/tasklists/new">Add Task</a><li>
+			<% if user_signed_in? %>
+			<li class = "nav-li"><%= link_to('Logout', destroy_user_session_path,:method => :delete) %></li>
+			<% else %>
+			<li class="nav-li"><%= link_to('Login', new_user_session_path) %></li>
+			<% end %>
+		</ul>
+	<% end %>
+	<div class = "center">
+		<table>
+			<tr class="top-row">
+				<td>Name</td>
+				<td>Address</td>
+				<td>Phone</td>
+			</tr>
+			<% @addresses.each do |address| %>
+			<tr>
+				<td><%= address.friend %></td>
+				<td><%= address.number %> <%= address.street %><br><%= address.city %>, <%= address.state %><br><%= address.zip %></td>
+				<td><%= address.phone %>
+				<td><%= link_to "View Contact", address_path(address.id) %></td>
+				<td><%= link_to "Edit Contact Info", edit_address_path(address.id) %></td>
+				<td><%= button_to "Delete Contact", address, method: :delete %></td>
+			<% end %>
+		</table>
+	</div>
 </body>
 </html>
