@@ -3,18 +3,16 @@
 	<link rel="stylesheet" type="text/css" href="../assets/home.css.scss">
 </head>
 <body>
-	<% if user_signed_in? %>
 		<ul class = "navbar">
 			<li class="nav-li"><a href="/addresses">Contacts</a></li>
 			<li class="nav-li"><a href="/tasklists">To-Do List</a></li>
 			<li class="nav-li"><a href="/addresses/new">Add Contact</a></li>
 			<li class="nav-li"><a href="/tasklists/new">Add Task</a><li>
 			<% if user_signed_in? %>
-			<li class = "nav-li"><%= link_to('Logout', destroy_user_session_path,:method => :delete) %></li>
+			<li class = "logout"><%= link_to('Logout', destroy_user_session_path,:method => :delete) %></li>
 			<% else %>
-			<li class="nav-li"><%= link_to('Login', new_user_session_path) %></li>
+			<li class="logout"><%= link_to('Login', new_user_session_path) %></li>
 			<% end %>
 		</ul>
-	<% end %>
 </body>
 

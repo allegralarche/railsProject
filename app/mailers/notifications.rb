@@ -11,4 +11,9 @@ class Notifications < ActionMailer::Base
     @id = tasklist.id
     mail to: tasklist.user.email
   end
+  def new_address(address)
+    @greeting = "Hi"
+    @id = address.id
+    mail to: address.user.email
+  end
 end

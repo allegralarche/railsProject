@@ -3,21 +3,30 @@ class AddressesController < ApplicationController
   	@address = Address.new
   end
 
-  def create
-  	@address = Address.new(address_params)
-  	if @address.save
-  		redirect_to addresses_path
-  	else
-  		render 'new'
-  	end
+  def create 
+    @address = Address.new(address_params)
+    if(@address.user_id != current_user.id)
+      redirect_to root_path
+    else 
+      if @address.save
+        Notifications.new_address(@address).deliver
+        redirect_to addresses_path
+     else
+        render "new"
+     end
+    end
   end
 
   def index
-  	@addresses=Address.all
+    if user_signed_in?
+     @addresses = Address.where(user_id:current_user).ordered
+    else
+      @addresses = []
+    end
   end
 
   def address_params
-    params.require(:address).permit(:friend, :number, :street, :city, :state, :zip, :phone)
+    params.require(:address).permit(:friend, :number, :street, :city, :state, :zip, :phone, :user_id)
   end
 
   def show

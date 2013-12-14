@@ -14,29 +14,36 @@
 
 body {
 	background-image: url("http://hdwallfan.com/wp-content/uploads/2013/06/Purple-Flowers-Wallpaper-HD-Background.jpg");
+	font-family: Helvetica, sans-serif;
+	font-size: 24px;
+	color: white;
 }
+td {
+	width: 10%;
+}
+.button {
 
+}
 .center {
-	margin-top: auto;
-	margin-bottom: auto;
+	margin-top: 10%;
+	margin-left: 30%;
 }
 .navbar {
 	position: absolute;
-	top: 0px;
 	background-color: #A4A4A4;
 	width: 100%;
-	opacity: .8;
+	opacity: .7;
+	list-style: none;
 }
 
 .nav-li {
 	list-style-type: none;
+	display: inline;
 	padding: 30px;
 	margin: 0px;
-	display: inline;
 	float: left;
 }
 a {
-	display: block;
 	text-decoration: none;
 	color: #EFF2FB;
 }
@@ -44,3 +51,10 @@ a {
 a:hover {
 	color:#380B61;
 }
+/*
+.logout {
+	float: right;
+	display: inline;
+	margin: 0px;
+	padding: 30px;
+}*/

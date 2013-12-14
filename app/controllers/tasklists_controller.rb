@@ -26,7 +26,7 @@ class TasklistsController < ApplicationController
   end
 
   def tasklist_params
-    params.require(:tasklist).permit(:title, :user_id)
+    params.require(:tasklist).permit(:title, :duedate, :user_id)
   end
 
   def edit
