@@ -1,4 +1,4 @@
-class AddPhoneToAddresses < ActiveRecord::Migration
+lass AddPhoneToAddresses < ActiveRecord::Migration
   def change
     add_column :addresses, :phone, :number
   end

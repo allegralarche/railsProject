@@ -1,4 +1,4 @@
-class AddDueDateToTasklists < ActiveRecord::Migration
+lass AddDueDateToTasklists < ActiveRecord::Migration
   def change
     add_column :tasklists, :duedate, :datetime
   end

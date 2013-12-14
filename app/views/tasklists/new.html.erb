@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<% if user_signed_in? %>
-		<ul class = "navbar">
-			<li class="nav-li"><a href="/addresses">Contacts</a></li>
-			<li class="nav-li"><a href="/tasklists">To-Do List</a></li>
-			<li class="nav-li"><a href="/addresses/new">Add Contact</a></li>
-			<li class="nav-li"><a href="/tasklists/new">Add Task</a><li>
+	<ul class = "navbar">
+			<li class="nav-li", "addresses"><a href="/addresses">Contacts</a></li>
+			<li class="nav-li", "tasklists"><a href="/tasklists">To-Do List</a></li>
+			<li class="nav-li", "newaddress"><a href="/addresses/new">Add Contact</a></li>
+			<li class="nav-li", "newtasklist"><a href="/tasklists/new">Add Task</a><li>
 			<% if user_signed_in? %>
-			<li class = "nav-li"><%= link_to('Logout', destroy_user_session_path,:method => :delete) %></li>
+			<li class = "nav-li", "logout"><%= link_to('Logout', destroy_user_session_path,:method => :delete) %></li>
 			<% else %>
-			<li class="nav-li"><%= link_to('Login', new_user_session_path) %></li>
+			<li class="nav-li", "logout"><%= link_to('Login', new_user_session_path) %></li>
 			<% end %>
 		</ul>
-	<% end %>
+	<br>
 	<div class="error-msg">
 		<% if @tasklist.errors.any? %>
 			<ul>
@@ -23,6 +22,7 @@
 			</ul>
 		<% end %>
 	</div>
+	<br>
 	<div class = "center">
 		<%= form_for(@tasklist) do |f| %>
 			<div class = "field">
@@ -36,7 +36,7 @@
 				<%= f.hidden_field :user_id, :value =>current_user.id%>
 			</div>
 			<div class = "actions">
-				<%= f.submit %>
+				<%= f.submit "Create Task" %>
 			</div>
 		<% end %>
 	</div>
