@@ -2,8 +2,16 @@
 
 LINK TO HEROKU APP: http://murmuring-citadel-2602.herokuapp.com/
 
-ISSUES:
--Don't know how to make it so that when I'm not hovering over the nav bar, it doesn't get highlighted
+DESCRIPTION:
+This app is like an online agenda pad. It has a to-do list that keeps track of tasks that need to be completed and when, and a contact list with addresses and phone numbers.
 
+FUNCTIONALITIES:
+- The validations exist to make sure that all the required fields are completed and in the proper format
+- The ordering scope puts contact lists and tasklists in order by name or title
+- The jquery function is trivial, but makes fontsize increase when the user hovers over a menu item
 
-WHAT I DID: -when the mouse hovers over the navbar, it gets highlighted a darker gray
+ADDONS:
+The heroku addon I used was sendgrid, which sends an email to the user any time they create a new task or contact based on the email they use to sign in with. Documentation for sendgrid available here: https://devcenter.heroku.com/articles/sendgrid
+
+GEMS:
+The gem I used was devise, which allows users to sign in to their personal agenda pad. Emails must be unique. Devise also allows users to reset their password in the event that they forget it. Documentation for this gem available here: http://devise.plataformatec.com.br/
