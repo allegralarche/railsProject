@@ -21,8 +21,5 @@ module FirstRailsApp
     # config.i18n.default_locale = :de
 
     config.action_mailer.default_url_options = {:host => "localhost:3000"}
-    config.assets.precompile += {
-        'application.css'
-    }
   end
 end
